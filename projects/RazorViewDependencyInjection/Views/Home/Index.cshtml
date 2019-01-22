@@ -1,5 +1,8 @@
-﻿@{
+﻿@inherits RazorViewDependencyInjection.Pages.InjectableWebViewPage
+@{
     ViewBag.Title = "Home Page";
 }
 
-<h2>API Token: @ViewBag.Token</h2>
+<h3 class="text-info">API Token (from ViewBag): @ViewBag.Token</h3>
+
+<h3 class="text-success">API Token (from direct Injection): @TokenService.ApiToken</h3>

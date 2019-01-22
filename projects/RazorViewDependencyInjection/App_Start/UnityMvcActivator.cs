@@ -1,4 +1,3 @@
-using RazorViewDependencyInjection.Factories;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -23,10 +22,6 @@ namespace RazorViewDependencyInjection
             FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(UnityConfig.Container));
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(UnityConfig.Container));
-
-            var defaultResolver = DependencyResolver.Current;
-            var customResolver = new CustomUnityDependencyResolver(UnityConfig.Container, defaultResolver);
-            DependencyResolver.SetResolver(customResolver);
         }
 
         /// <summary>

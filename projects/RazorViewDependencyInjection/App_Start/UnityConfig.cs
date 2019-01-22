@@ -1,5 +1,4 @@
 using RazorViewDependencyInjection.Contracts;
-using RazorViewDependencyInjection.Factories;
 using RazorViewDependencyInjection.Services;
 using System;
 using System.Web.Mvc;
@@ -40,7 +39,6 @@ namespace RazorViewDependencyInjection
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType<ITokenService, TokenService>();
-            container.RegisterType<IViewPageActivator, CustomViewPageActivator>();
         }
     }
 }

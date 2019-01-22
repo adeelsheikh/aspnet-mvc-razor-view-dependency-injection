@@ -27,6 +27,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+        <h3 class="text-success">API Token (from direct Injection in Layout Page): @TokenService.ApiToken</h3>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Dependency Injection Example</p>
